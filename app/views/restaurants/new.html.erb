@@ -1,0 +1,11 @@
+<%= simple_form_for(@restaurant) do |f| %>
+  <%= f.error_notification %>
+
+  <%= f.input :name, placeholder: "e.g. \"Chez Bruneau\"" %>
+  <%= f.input :address, placeholder: "e.g. \"Londonstreet 43\""%>
+  <%= f.input :phone_number %>
+  <%= f.input :category %>
+
+  <%= f.button :submit %>
+  <%= link_to "back to home page", root_path %>
+<% end %>

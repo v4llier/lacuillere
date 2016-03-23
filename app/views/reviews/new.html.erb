@@ -1,0 +1,13 @@
+
+
+<div style="padding: 40px">
+<%= simple_form_for [@restaurant, @review] do |f| %>
+  <%= f.error_notification %>
+
+  <%= f.text_field :content, input_html: {class: "input-lg"}, placeholder: "write a review" %>
+  <%= f.text_field :rating, input_html: {class: "input-lg"}, placeholder: "0 - 5" %>
+
+  <%= f.button :submit %>
+  <%= link_to "back to restaurant page", restaurant_path(@restaurant) %>
+<% end %>
+</div>
